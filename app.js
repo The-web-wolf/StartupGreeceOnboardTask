@@ -89,14 +89,13 @@ const regListeners = () => {
         // map through data and remove all entries with fieldId
         data = data.map((entry) => entry.filter((field) => field.fieldId !== fieldId))
         // if form is empty, reset app
-        if (!form.length) data = []
+        if (!form.length) {
+          data = []
+          isWorking = false
+        }
         saveData('data', data)
         saveData('form', form)
         refresh()
-        if (!form.length) {
-          isWorking = false
-          refresh()
-        }
       }
     })
   })
