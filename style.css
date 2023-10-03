@@ -1,0 +1,240 @@
+@import url('assets/reset.css');
+@import url('assets/@sweetalert2/theme-borderless/borderless.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+
+html {
+  --color-primary: rgb(113, 103, 224);
+  --color-danger: rgb(220, 55, 65);
+}
+body {
+  background-color: #36465d;
+}
+
+* {
+  font-family: 'Poppins', 'sans-serif';
+  font-weight: 400;
+}
+.color-primary {
+  color: var(--color-primary);
+}
+.justify-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.d-none {
+  display: none;
+}
+
+.defaultText {
+  font-size: 1rem;
+  text-align: center;
+}
+.defaultText img {
+  max-width: 100%;
+  max-width: 200px;
+  margin: 0 auto 2rem auto;
+  height: auto;
+}
+
+#onboardText {
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #e8e2f5;
+}
+
+.action-button {
+  border: 1px solid transparent;
+  box-shadow: 0px 0px 10px rgba(113, 103, 224, 0.5);
+  color: #ffffff;
+  background-color: var(--color-primary);
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.action-button:hover {
+  background-color: rgba(113, 103, 224, 0.1);
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+button[type='submit'],
+.actionButtons button {
+  position: relative;
+  bottom: unset;
+  right: unset;
+  width: 100%;
+}
+
+#getStarted {
+  width: 70px;
+  height: 70px;
+}
+
+.card {
+  background-color: #e8e2f5;
+  box-shadow: 0px 0px 10px rgba(113, 103, 224, 0.3);
+  position: relative;
+  border-radius: 20px;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.card &::before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  background-color: inherit;
+  height: 100%;
+}
+.card .card-header {
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: #e8e2f5;
+  color: var(--color-primary);
+  padding: 0.5rem 1rem;
+  height: 10%;
+}
+.card .card-body {
+  padding: 1rem;
+  height: 90%;
+}
+.workArea {
+  width: 100%;
+}
+.workArea .container {
+  display: flex;
+  gap: 1rem;
+  height: 100vh;
+  padding: 1em;
+}
+
+.workArea .workForm {
+  width: 30%;
+  min-height: 200px;
+  /* align-self: center; */
+}
+.workArea .workTable {
+  width: 70%;
+}
+
+@media screen and (max-width: 900px) {
+  .workArea .container {
+    display: block;
+  }
+  .workArea .workForm {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .workArea .workTable {
+    width: 100%;
+  }
+}
+
+.skeleton {
+  height: 100%;
+  width: 100%;
+}
+.skeleton button {
+  height: 50px;
+  width: 50px;
+}
+
+.swal2-input,
+.swal2-checkbox {
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.swal2-checkbox {
+  margin-top: 10px;
+  text-align: left;
+  background: transparent !important;
+  display: inline-block;
+}
+.swal2-label,
+.swal2-html-container {
+  color: #fff !important;
+}
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#submitForm {
+  border-radius: 10px;
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.form-input {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 10px;
+}
+.form-input div:first-child {
+  flex-grow: 1;
+}
+.form-input input,
+.form-input select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-primary);
+  outline: none;
+}
+.actionButtons {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+.actionButtons button {
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table thead tr th {
+  padding: 0.5rem;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
+}
+
+table tbody tr td {
+  padding: 0.5rem;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.2);
+}

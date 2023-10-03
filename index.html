@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Form - Startup Greece Intern Onboard Task</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js" type="module"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="workArea d-none">
+      <div class="container">
+        <div class="workForm card">
+          <div class="card-header">
+            <h3>My form</h3>
+          </div>
+          <div class="card-body">
+            <form class="formWrapper">
+              <div id="userForm"></div>
+              <div style="text-align: center; padding: 10px 0">
+                <button type="submit" id="submitForm" class="action-button">
+                  Save Response<span class="material-symbols-outlined">save</span>
+                </button>
+              </div>
+            </form>
+
+            <div class="skeleton justify-center">
+              <div class="defaultText">
+                Click on the
+                <span class="material-symbols-outlined color-primary"> add </span> button to create
+                your first form field...
+              </div>
+              <button class="justify-center action-button" id="addField">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="workTable card">
+          <div class="card-header">
+            <h3>My dataset</h3>
+          </div>
+          <div class="card-body">
+            <table></table>
+            <div class="skeleton justify-center">
+              <div class="defaultText">
+                <img src="assets/empty.svg" />
+                Once you save your first response, it will appear here...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="defaultText" id="onboardText">
+      Click on the
+      <span class="material-symbols-outlined color-primary"> playlist_add </span> button to begin
+      building your dataset...
+    </div>
+    <button id="getStarted" class="justify-center action-button">
+      <span class="material-symbols-outlined"> playlist_add </span>
+    </button>
+  </body>
+</html>
